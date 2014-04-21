@@ -1,0 +1,42 @@
+<div ng-controller="FeedCtrl">
+    <div class="row">
+
+
+
+
+        <table class="table table-striped">
+            <thead>
+            <th>
+                Twitter User Info
+            </th>
+            <th>
+                Twitter createdDate in millisecs
+            </th>
+            <th>
+                Twitter status posted
+            </th>
+            <th>
+                IsRetweeted
+            </th>
+
+            </thead>
+            <tbody>
+
+
+                <tr ng-repeat="feed in feedModel">
+
+                    <td>{{feed.twitterUser}}</td>
+                    <td>{{feed.createdDate}}</td>
+                    <td>{{feed.text}}</td>
+                    <td>{{feed.isRetweeted}}</td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+</div>
+

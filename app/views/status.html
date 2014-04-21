@@ -1,0 +1,32 @@
+
+<div class="row" id="fb-form">
+
+    <div ng-show="showForm">
+        <div class="well sidebar-nav">
+            <strong>Twitter Status update Form</strong>
+        </div>
+
+
+        <form class="form-control-static">
+
+        <div class="control-group">
+            <div class="control-label text-left">
+                <label>Twitter Status</label>
+            </div>
+
+
+            <div class="controls">
+                <textarea  name="txtValue" value="" ng-model="txtValue"></textarea>
+
+            </div>
+        </div>
+        <br>
+        <button type="submit" ng-click="callTwitter(txtValue);" class="btn btn-group">Submit Status to Twitter</button>
+        </form>
+
+    </div>
+    <div ng-show="successForm">
+      <h1> Status is updated on Twitter</h1>
+    </div>
+
+</div>

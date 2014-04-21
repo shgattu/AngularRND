@@ -1,0 +1,43 @@
+<div ng-controller="SearchCtrl">
+    <div class="row">
+
+
+Twitter search results
+        <input type="text" ng-model="searchText">
+        <button type="submit" ng-click="CallSearch(searchText);">Search Twitter with String</button>
+        <table class="table table-striped">
+            <thead>
+            <th>
+                Twitter User Info
+            </th>
+            <th>
+                Twitter createdDate in millisecs
+            </th>
+            <th>
+                Twitter status posted
+            </th>
+            <th>
+                IsRetweeted
+            </th>
+
+            </thead>
+            <tbody>
+
+
+            <tr ng-repeat="feed in feedModelData">
+
+                <td>{{feed.twitterUser}}</td>
+                <td>{{feed.createdDate}}</td>
+                <td>{{feed.text}}</td>
+                <td>{{feed.isRetweeted}}</td>
+            </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>
+
